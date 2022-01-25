@@ -3,13 +3,14 @@
 - **Windows** <br>
 - **Linux** <br>
 - **macOS** <br>
+- **Web Assembly** <br>
 - **Hello World** <br>
 
 ## Windows
 
 - You Should have either one of them: `winlibs` or `tdm-gcc` or `mingw-w64` or `w64devkit`
 
-If you don't have any of them, you can follow this tutorial about setting up `tdm-gcc`.
+If you don't have any of them, should follow this part about setting up `tdm-gcc`.
 
 - Go to the [github releases](https://github.com/edubart/nelua-lang/releases) page of the nelua-lang repository, click on the drop-down button named "assets", Then click on `nelua-windows-x86_64-latest.zip`.
 - Save the file on your system, unzip the `nelua-windows-x86_64-latest.zip` file by right-clicking on the zip, then click on Extract Here.
@@ -24,7 +25,7 @@ In the *System Variables* find the *PATH* variable, select it and click on edit
 In the *Edit System variables window*, click on new and paste the address, click OK and OK again. 
 
 ## Linux
-- You should have GCC installed.
+- You should have `GCC`, `GNU make`, and `libc-dev` installed.
 - Go to the [github releases](https://github.com/edubart/nelua-lang/releases) page of the nelua-lang repository, click on the drop-down button named "assets", Then click on `nelua-linux-x86_64-latest.tar.xz`.
 - Unzip the tar file by running the following command in a terminal.
 
@@ -53,8 +54,25 @@ In the *Edit System variables window*, click on new and paste the address, click
 > export PATH="/path/to/unzipped/folder:$PATH"
 ```
 
-## Hello World
+## Web Assembly
+- You should have emscripten installed, if not, you can follow this [tutorial](https://emscripten.org/docs/getting_started/downloads.html)
+- Depending on your operating system, follow the above guide for installing the nelua compiler
+- Create a new file named ``HelloWorld.nelua`` and write the following code.
 
+```lua
+print("Hello World")
+```
+- Compile and run the ``HelloWorld.nelua`` file by running the following command in the command prompt/terminal.
+
+```bash
+> nelua HelloWorld.nelua --cc=emcc -o HelloWorld
+> node HelloWorld.js
+Hello World
+```
+
+
+
+## Hello World
 - Create a new file named ``HelloWorld.nelua`` and write the following code.
 
 ```lua
