@@ -25,7 +25,7 @@ In the *System Variables* find the *PATH* variable, select it and click on edit
 In the *Edit System variables window*, click on new and paste the address, click OK and OK again. 
 
 ## Linux
-- You should have `GCC`, `GNU make`, and `libc-dev` installed.
+- You should have `build-essential` and `libc-dev` installed.
 - Go to the [github releases](https://github.com/edubart/nelua-lang/releases) page of the nelua-lang repository, click on the drop-down button named "assets", Then click on `nelua-linux-x86_64-latest.tar.xz`.
 - Unzip the tar file by running the following command in a terminal.
 
